@@ -25,6 +25,7 @@ const GithubState = ({ children }) => {
     setLoading()
 
     const response = await axios.get(withCreds(`https:/api.github.com/search/users?q=${value}`))
+    console.log(withCreds(`https:/api.github.com/search/users?q=${value}`))
 
     dispatch({
       type: SEARCH_USERS,
